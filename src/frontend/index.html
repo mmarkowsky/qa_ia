@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Registro académico de estudiantes">
+  <title>Registro de estudiantes | Secretaría académica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #152536;
+      --muted: #637487;
+      --blue: #1769aa;
+      --blue-dark: #102a43;
+      --blue-soft: #e9f3fb;
+      --line: #dce4eb;
+      --canvas: #f3f6f8;
+      --white: #fff;
+      --red: #b42335;
+      --green: #177245;
+      --radius: 8px;
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--canvas);
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; background: var(--canvas); }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .masthead {
+      color: var(--white);
+      background: var(--blue-dark);
+      border-bottom: 4px solid #3c91ce;
+    }
+    .masthead-inner, main { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+    .masthead-inner { min-height: 76px; display: flex; align-items: center; gap: 14px; }
+    .institution-mark { width: 38px; height: 38px; display: grid; place-items: center; color: #d9efff; border: 1px solid #64839d; border-radius: 7px; }
+    .institution-mark svg { width: 21px; height: 21px; }
+    .institution-name { font: 700 14px/1.3 "Manrope", sans-serif; letter-spacing: 0; }
+    .institution-unit { display: block; margin-top: 3px; color: #b9cbd8; font-size: 12px; font-weight: 400; }
+    .masthead-label { margin-left: auto; color: #c6d5e0; font-size: 12px; }
+
+    main { padding: 36px 0 56px; }
+    .page-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 24px; }
+    .eyebrow { margin: 0 0 7px; color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; }
+    h1, h2, p { margin-top: 0; }
+    h1 { margin-bottom: 7px; font: 800 30px/1.18 "Manrope", sans-serif; letter-spacing: 0; }
+    .subtitle { max-width: 600px; margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .secure-note { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .secure-note svg { width: 16px; height: 16px; color: var(--blue); }
+
+    .section { margin-top: 20px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+    .section-heading { display: flex; align-items: center; gap: 11px; padding: 20px 24px 16px; border-bottom: 1px solid #e8edf1; }
+    .section-icon { width: 32px; height: 32px; display: grid; place-items: center; color: var(--blue); background: var(--blue-soft); border-radius: 6px; }
+    .section-icon svg { width: 17px; height: 17px; }
+    h2 { margin: 0; font: 700 16px/1.3 "Manrope", sans-serif; letter-spacing: 0; }
+    .section-caption { margin: 3px 0 0; color: var(--muted); font-size: 12px; }
+
+    form { padding: 22px 24px 24px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; row-gap: 17px; }
+    .field { min-width: 0; }
+    .field label { display: flex; align-items: center; gap: 7px; margin-bottom: 7px; font-size: 13px; font-weight: 600; }
+    .field label svg { width: 15px; height: 15px; color: #698198; stroke-width: 1.8; }
+    .required { color: var(--red); }
+    .control-wrap { position: relative; }
+    .field input, .field select {
+      width: 100%; height: 43px; padding: 0 12px; color: var(--ink);
+      background: #fff; border: 1px solid #cbd6df; border-radius: 6px;
+      outline: none; transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+    }
+    .field input::placeholder { color: #92a0ad; }
+    .field select:invalid { color: #788896; }
+    .field input:hover, .field select:hover { border-color: #92aabd; }
+    .field input:focus, .field select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgb(23 105 170 / 14%); }
+    .field input[readonly] { color: #52677a; background: #f2f5f7; cursor: default; }
+    .field input[aria-invalid="true"], .field select[aria-invalid="true"] { border-color: var(--red); }
+    .field input[aria-invalid="true"]:focus, .field select[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px rgb(180 35 53 / 12%); }
+    .field-error { min-height: 0; margin: 0; color: var(--red); font-size: 12px; line-height: 1.4; }
+    .field-error:not(:empty) { padding-top: 5px; }
+    .date-age-row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(100px, .7fr); gap: 12px; }
+    .age-field label { visibility: hidden; }
+    .age-field input { text-align: center; font-weight: 600; }
+
+    .form-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 21px; padding-top: 18px; border-top: 1px solid #e8edf1; }
+    .form-hint { margin: 0; color: var(--muted); font-size: 12px; }
+    .actions { display: flex; gap: 10px; }
+    .button { min-height: 41px; display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 0 16px; border: 1px solid transparent; border-radius: 6px; font-size: 13px; font-weight: 700; transition: background 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease; }
+    .button:hover { transform: translateY(-1px); }
+    .button:active { transform: translateY(0); }
+    .button:focus-visible { outline: 3px solid rgb(23 105 170 / 25%); outline-offset: 2px; }
+    .button svg { width: 16px; height: 16px; }
+    .button-primary { color: #fff; background: var(--blue); }
+    .button-primary:hover { background: #12588f; box-shadow: 0 3px 8px rgb(16 42 67 / 17%); }
+    .button-secondary { color: #33485a; background: #fff; border-color: #cbd6df; }
+    .button-secondary:hover { background: #f4f7f9; border-color: #aab9c6; }
+    .status-message { display: none; margin: 0 24px 18px; padding: 11px 13px; border-radius: 6px; font-size: 13px; line-height: 1.45; animation: reveal 220ms ease-out both; }
+    .status-message.visible { display: block; }
+    .status-message.success { color: #145c39; background: #eaf6ef; border: 1px solid #b8e0c7; }
+    .status-message.error { color: #8f1c2c; background: #fff0f1; border: 1px solid #f0c1c7; }
+
+    .table-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-left: auto; color: var(--muted); font-size: 12px; }
+    .count { display: inline-flex; align-items: center; justify-content: center; min-width: 27px; height: 25px; padding: 0 7px; color: var(--blue-dark); background: #eaf1f6; border-radius: 13px; font-weight: 700; }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; white-space: nowrap; }
+    th { padding: 12px 14px; color: #52677a; background: #f6f8fa; font-size: 10px; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--line); }
+    th:first-child, td:first-child { padding-left: 24px; }
+    th:last-child, td:last-child { padding-right: 24px; }
+    td { padding: 13px 14px; border-bottom: 1px solid #edf1f4; color: #34495a; }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr { animation: row-in 300ms ease-out both; }
+    .student-name { color: var(--ink); font-weight: 600; }
+    .empty-state { padding: 34px 20px; text-align: center; color: var(--muted); }
+    .empty-state svg { width: 28px; height: 28px; margin-bottom: 9px; color: #91a3b2; }
+    .empty-state p { margin: 0; font-size: 13px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+    @keyframes reveal { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes row-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 680px) {
+      .masthead-inner, main { width: min(100% - 32px, 560px); }
+      .masthead-inner { min-height: 66px; }
+      .masthead-label { display: none; }
+      main { padding: 27px 0 40px; }
+      .page-heading { align-items: start; margin-bottom: 20px; }
+      .secure-note { display: none; }
+      h1 { font-size: 25px; }
+      .section { margin-top: 15px; }
+      .section-heading { padding: 17px 16px 14px; }
+      form { padding: 18px 16px 18px; }
+      .form-grid { grid-template-columns: 1fr; row-gap: 15px; }
+      .form-footer { align-items: stretch; flex-direction: column; }
+      .actions { display: grid; grid-template-columns: 1fr 1fr; }
+      .button { padding: 0 10px; }
+      .status-message { margin: 0 16px 16px; }
+      th:first-child, td:first-child { padding-left: 16px; }
+      th:last-child, td:last-child { padding-right: 16px; }
+      .table-toolbar { gap: 8px; }
+    }
+    @media (max-width: 390px) {
+      .date-age-row { grid-template-columns: minmax(0, 1.4fr) minmax(85px, .7fr); gap: 8px; }
+      .button { font-size: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="institution-mark" aria-hidden="true"><i data-lucide="landmark"></i></div>
+      <div class="institution-name">SECRETARÍA ACADÉMICA<span class="institution-unit">Gestión de estudiantes</span></div>
+      <div class="masthead-label">Sistema de registro · Admisiones</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">Registro académico</p>
+        <h1>Nuevo estudiante</h1>
+        <p class="subtitle">Ingresa los datos personales y académicos para incorporarlos al registro institucional.</p>
+      </div>
+      <div class="secure-note"><i data-lucide="shield-check" aria-hidden="true"></i> Información de uso institucional</div>
+    </div>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="section-heading">
+        <span class="section-icon" aria-hidden="true"><i data-lucide="user-round-plus"></i></span>
+        <div><h2 id="form-title">Datos del estudiante</h2><p class="section-caption">Todos los campos son obligatorios</p></div>
+      </div>
+      <form id="student-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="identification"><i data-lucide="badge-check" aria-hidden="true"></i> Identificación <span class="required" aria-hidden="true">*</span></label>
+            <input id="identification" name="identification" type="text" autocomplete="off" placeholder="Ej. 1023456789" aria-describedby="identification-error" required>
+            <p class="field-error" id="identification-error"></p>
+          </div>
+          <div class="field">
+            <label for="first-name"><i data-lucide="user-round" aria-hidden="true"></i> Nombre <span class="required" aria-hidden="true">*</span></label>
+            <input id="first-name" name="firstName" type="text" autocomplete="given-name" placeholder="Nombre del estudiante" aria-describedby="first-name-error" required>
+            <p class="field-error" id="first-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="last-name"><i data-lucide="users-round" aria-hidden="true"></i> Apellido <span class="required" aria-hidden="true">*</span></label>
+            <input id="last-name" name="lastName" type="text" autocomplete="family-name" placeholder="Apellido del estudiante" aria-describedby="last-name-error" required>
+            <p class="field-error" id="last-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="email"><i data-lucide="mail" aria-hidden="true"></i> Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" aria-describedby="email-error" required>
+            <p class="field-error" id="email-error"></p>
+          </div>
+          <div class="field">
+            <label for="country"><i data-lucide="globe-2" aria-hidden="true"></i> País <span class="required" aria-hidden="true">*</span></label>
+            <input id="country" name="country" type="text" autocomplete="country-name" placeholder="País de residencia" aria-describedby="country-error" required>
+            <p class="field-error" id="country-error"></p>
+          </div>
+          <div class="field">
+            <label for="career"><i data-lucide="graduation-cap" aria-hidden="true"></i> Carrera <span class="required" aria-hidden="true">*</span></label>
+            <select id="career" name="career" aria-describedby="career-error" required>
+              <option value="" selected disabled>Selecciona una carrera</option>
+              <option>Ing. Informática</option>
+              <option>Ing. Electrónica</option>
+              <option>Ing. Telecomunicaciones</option>
+              <option>Ing. Robótica</option>
+              <option>Otra</option>
+            </select>
+            <p class="field-error" id="career-error"></p>
+          </div>
+          <div class="field date-age-row">
+            <div class="field">
+              <label for="birth-date"><i data-lucide="calendar-days" aria-hidden="true"></i> Fecha de nacimiento <span class="required" aria-hidden="true">*</span></label>
+              <input id="birth-date" name="birthDate" type="date" autocomplete="bday" aria-describedby="birth-date-error" required>
+              <p class="field-error" id="birth-date-error"></p>
+            </div>
+            <div class="field age-field">
+              <label for="age">Edad</label>
+              <input id="age" name="age" type="text" value="—" readonly aria-label="Edad calculada">
+            </div>
+          </div>
+        </div>
+        <div class="form-footer">
+          <p class="form-hint"><span class="required" aria-hidden="true">*</span> Campos requeridos</p>
+          <div class="actions">
+            <button class="button button-secondary" type="button" id="clear-button"><i data-lucide="rotate-ccw" aria-hidden="true"></i> Limpiar</button>
+            <button class="button button-primary" type="submit"><i data-lucide="user-round-check" aria-hidden="true"></i> Registrar estudiante</button>
+          </div>
+        </div>
+      </form>
+      <div id="status-message" class="status-message" role="status" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <section class="section" aria-labelledby="table-title">
+      <div class="section-heading">
+        <span class="section-icon" aria-hidden="true"><i data-lucide="clipboard-list"></i></span>
+        <div><h2 id="table-title">Estudiantes registrados</h2><p class="section-caption">Registros de esta sesión</p></div>
+        <div class="table-toolbar"><span>Total</span><span class="count" id="student-count" role="status" aria-label="0 estudiantes registrados">0</span></div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <caption class="sr-only">Lista de estudiantes registrados</caption>
+          <thead>
+            <tr><th scope="col">Identificación</th><th scope="col">Nombre</th><th scope="col">Apellido</th><th scope="col">Correo</th><th scope="col">País</th><th scope="col">Carrera</th><th scope="col">Fecha de nacimiento</th><th scope="col">Edad</th></tr>
+          </thead>
+          <tbody id="student-list"></tbody>
+        </table>
+      </div>
+      <div class="empty-state" id="empty-state"><i data-lucide="inbox" aria-hidden="true"></i><p>Aún no hay estudiantes registrados.</p></div>
+    </section>
+  </main>
+
+  <script src="student-logic.js"></script>
+  <script>
+    const form = document.querySelector("#student-form");
+    const birthDateInput = document.querySelector("#birth-date");
+    const ageInput = document.querySelector("#age");
+    const statusMessage = document.querySelector("#status-message");
+    const studentList = document.querySelector("#student-list");
+    const studentCount = document.querySelector("#student-count");
+    const emptyState = document.querySelector("#empty-state");
+    const students = [];
+
+    const fieldIds = ["identification", "first-name", "last-name", "email", "country", "career", "birth-date"];
+
+    function readStudent() {
+      return {
+        identification: document.querySelector("#identification").value.trim(),
+        firstName: document.querySelector("#first-name").value.trim(),
+        lastName: document.querySelector("#last-name").value.trim(),
+        email: document.querySelector("#email").value.trim(),
+        country: document.querySelector("#country").value.trim(),
+        career: document.querySelector("#career").value,
+        birthDate: birthDateInput.value
+      };
+    }
+
+    function setFieldError(input, message) {
+      const errorElement = document.getElementById(`${input.id}-error`);
+      input.setAttribute("aria-invalid", message ? "true" : "false");
+      errorElement.textContent = message;
+    }
+
+    function validateField(input) {
+      const message = StudentLogic.validateStudent(readStudent(), students).errors[input.id] || "";
+      setFieldError(input, message);
+      return !message;
+    }
+
+    function showStatus(message, type) {
+      statusMessage.textContent = message;
+      statusMessage.className = `status-message visible ${type}`;
+    }
+
+    function updateAge() {
+      const message = StudentLogic.validateBirthDate(birthDateInput.value);
+      setFieldError(birthDateInput, message);
+      const date = StudentLogic.parseLocalDate(birthDateInput.value);
+      ageInput.value = date && !message ? String(StudentLogic.calculateAge(date)) : "—";
+      return !message;
+    }
+
+    function formatDate(value) {
+      const date = StudentLogic.parseLocalDate(value);
+      return new Intl.DateTimeFormat("es", { day: "2-digit", month: "2-digit", year: "numeric" }).format(date);
+    }
+
+    function addStudentRow(student) {
+      const row = document.createElement("tr");
+      const values = [student.identification, student.firstName, student.lastName, student.email, student.country, student.career, formatDate(student.birthDate), student.age];
+      values.forEach((value, index) => {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        if (index === 1 || index === 2) cell.className = "student-name";
+        row.append(cell);
+      });
+      studentList.prepend(row);
+      emptyState.hidden = true;
+      studentCount.textContent = String(students.length);
+      studentCount.setAttribute("aria-label", `${students.length} ${students.length === 1 ? "estudiante registrado" : "estudiantes registrados"}`);
+    }
+
+    fieldIds.forEach(id => {
+      const input = document.getElementById(id);
+      input.addEventListener("blur", () => validateField(input));
+      input.addEventListener("input", () => {
+        if (input.getAttribute("aria-invalid") === "true") validateField(input);
+      });
+      input.addEventListener("change", () => validateField(input));
+    });
+
+    birthDateInput.addEventListener("input", updateAge);
+    birthDateInput.addEventListener("change", updateAge);
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      statusMessage.className = "status-message";
+      const inputs = fieldIds.map(id => document.getElementById(id));
+      const student = readStudent();
+      const validation = StudentLogic.validateStudent(student, students);
+      inputs.forEach(input => setFieldError(input, validation.errors[input.id] || ""));
+      ageInput.value = validation.age === null ? "—" : String(validation.age);
+      const invalidIndex = inputs.findIndex(input => validation.errors[input.id]);
+      if (!validation.isValid) {
+        showStatus("Revisa los campos señalados antes de registrar al estudiante.", "error");
+        inputs[invalidIndex === -1 ? inputs.length - 1 : invalidIndex].focus();
+        return;
+      }
+
+      try {
+        const response = await fetch("/api/students", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(student)
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          Object.entries(result.fieldErrors || {}).forEach(([field, message]) => {
+            const input = document.getElementById(field);
+            if (input) setFieldError(input, message);
+          });
+          showStatus(result.error || "No fue posible guardar al estudiante.", "error");
+          return;
+        }
+
+        students.unshift(result);
+        addStudentRow(result);
+      } catch {
+        showStatus("No fue posible conectar con el servidor. Intenta nuevamente.", "error");
+        return;
+      }
+      form.reset();
+      ageInput.value = "—";
+      inputs.forEach(input => setFieldError(input, ""));
+      showStatus(`Estudiante ${student.firstName} ${student.lastName} registrado correctamente.`, "success");
+      document.querySelector("#identification").focus();
+    });
+
+    document.querySelector("#clear-button").addEventListener("click", () => {
+      form.reset();
+      ageInput.value = "—";
+      fieldIds.forEach(id => setFieldError(document.getElementById(id), ""));
+      statusMessage.className = "status-message";
+      statusMessage.textContent = "";
+      document.querySelector("#identification").focus();
+    });
+
+    async function loadStudents() {
+      try {
+        const response = await fetch("/api/students");
+        if (!response.ok) throw new Error("Request failed");
+        students.push(...await response.json());
+        [...students].reverse().forEach(addStudentRow);
+      } catch {
+        showStatus("No fue posible cargar los estudiantes. Comprueba la conexión con el servidor.", "error");
+      }
+    }
+
+    if (window.lucide) window.lucide.createIcons();
+    loadStudents();
+  </script>
+</body>
+</html>

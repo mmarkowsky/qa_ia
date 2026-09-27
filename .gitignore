@@ -1,0 +1,13 @@
+node_modules/
+.env
+npm-debug.log*
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

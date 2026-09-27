@@ -1,0 +1,26 @@
+{
+  "name": "academic-student-registry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static student registration form with a MySQL-backed Node.js API",
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "test": "npm run test:unit && npm run test:api",
+    "test:unit": "node --test tests/unit/student-logic.test.js",
+    "test:api": "node --test tests/api/backend.test.js",
+    "test:accessibility": "playwright test",
+    "test:e2e:headless": "cypress run --headless",
+    "test:e2e:visual": "cypress open",
+    "test:frontend": "cypress run --headless",
+    "test:ci": "npm test && start-server-and-test start http://127.0.0.1:3000/api/health test:frontend"
+  },
+  "dependencies": {
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "cypress": "^13.17.0",
+    "start-server-and-test": "^2.0.10"
+  }
+}

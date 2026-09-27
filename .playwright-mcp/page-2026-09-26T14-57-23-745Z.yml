@@ -1,0 +1,128 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e7]:
+        - text: SECRETARÍA ACADÉMICA
+        - generic [ref=e8]: Gestión de estudiantes
+      - generic [ref=e9]: Sistema de registro · Admisiones
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: Registro académico
+        - heading "Nuevo estudiante" [level=1] [ref=e14]
+        - paragraph [ref=e15]: Ingresa los datos personales y académicos para incorporarlos al registro institucional.
+      - generic [ref=e16]: Información de uso institucional
+    - region [ref=e20]:
+      - generic [ref=e26]:
+        - heading "Datos del estudiante" [level=2] [ref=e27]
+        - paragraph [ref=e28]: Todos los campos son obligatorios
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - text: Identificación
+              - generic [aria-hidden] [ref=e36]: "*"
+            - textbox "Identificación" [ref=e37]:
+              - /placeholder: Ej. 1023456789
+            - paragraph
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - text: Nombre
+              - generic [aria-hidden] [ref=e43]: "*"
+            - textbox "Nombre" [ref=e44]:
+              - /placeholder: Nombre del estudiante
+            - paragraph
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - text: Apellido
+              - generic [aria-hidden] [ref=e51]: "*"
+            - textbox "Apellido" [ref=e52]:
+              - /placeholder: Apellido del estudiante
+            - paragraph
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - text: Correo electrónico
+              - generic [aria-hidden] [ref=e58]: "*"
+            - textbox "Correo electrónico" [ref=e59]:
+              - /placeholder: nombre@correo.com
+            - paragraph
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - text: País
+              - generic [aria-hidden] [ref=e67]: "*"
+            - textbox "País" [ref=e68]:
+              - /placeholder: País de residencia
+            - paragraph
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - text: Carrera
+              - generic [aria-hidden] [ref=e74]: "*"
+            - combobox "Carrera" [ref=e75]:
+              - option "Selecciona una carrera" [disabled] [selected]
+              - option "Ing. Informática"
+              - option "Ing. Electrónica"
+              - option "Ing. Telecomunicaciones"
+              - option "Ing. Robótica"
+              - option "Otra"
+            - paragraph
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - text: Fecha de nacimiento
+                - generic [aria-hidden] [ref=e81]: "*"
+              - textbox "Fecha de nacimiento" [ref=e82]
+              - paragraph
+            - textbox "Edad calculada" [ref=e84]: —
+        - generic [ref=e85]:
+          - paragraph [ref=e86]: "* Campos requeridos"
+          - generic [ref=e87]:
+            - button "Limpiar" [ref=e88] [cursor=pointer]
+            - button "Registrar estudiante" [ref=e92] [cursor=pointer]
+    - region [ref=e97]:
+      - generic [ref=e98]:
+        - generic [ref=e103]:
+          - heading "Estudiantes registrados" [level=2] [ref=e104]
+          - paragraph [ref=e105]: Registros de esta sesión
+        - generic [ref=e106]:
+          - generic [ref=e107]: Total
+          - generic "3 estudiantes registrados" [ref=e108]: "3"
+      - table [ref=e110]:
+        - caption [ref=e111]: Lista de estudiantes registrados
+        - rowgroup [ref=e112]:
+          - row [ref=e113]:
+            - columnheader "Identificación" [ref=e114]
+            - columnheader "Nombre" [ref=e115]
+            - columnheader "Apellido" [ref=e116]
+            - columnheader "Correo" [ref=e117]
+            - columnheader "País" [ref=e118]
+            - columnheader "Carrera" [ref=e119]
+            - columnheader "Fecha de nacimiento" [ref=e120]
+            - columnheader "Edad" [ref=e121]
+        - rowgroup [ref=e122]:
+          - row [ref=e123]:
+            - cell "jghjhjghj" [ref=e124]
+            - cell "hgjghjgh" [ref=e125]
+            - cell "hjghjghj" [ref=e126]
+            - cell "hjghjhgjhgj@teste.com" [ref=e127]
+            - cell "hjghjhg" [ref=e128]
+            - cell "Ing. Informática" [ref=e129]
+            - cell "01/09/2026" [ref=e130]
+            - cell "0" [ref=e131]
+          - row [ref=e132]:
+            - cell "76576576" [ref=e133]
+            - cell "gghgh" [ref=e134]
+            - cell "hjhbhjbhj" [ref=e135]
+            - cell "hjbhj@gmali.com" [ref=e136]
+            - cell "BR" [ref=e137]
+            - cell "Ing. Informática" [ref=e138]
+            - cell "12/09/2026" [ref=e139]
+            - cell "0" [ref=e140]
+          - row [ref=e141]:
+            - cell "123456" [ref=e142]
+            - cell "Max" [ref=e143]
+            - cell "Marko" [ref=e144]
+            - cell "tste@gmail.com" [ref=e145]
+            - cell "AR" [ref=e146]
+            - cell "Ing. Robótica" [ref=e147]
+            - cell "16/09/2026" [ref=e148]
+            - cell "0" [ref=e149]
