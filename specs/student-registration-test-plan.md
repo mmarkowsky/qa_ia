@@ -28,7 +28,7 @@ Aplicação web de registro acadêmico de estudantes. Permite preencher dados pe
 
 #### 1.2. Verificar opções de carreira
 
-**File:** `tests/frontend/student-registration-careers.spec.js`
+**File:** `tests/frontend/student-registration.cy.js`
 
 **Steps:**
   1. Abra a página inicial em estado limpo e abra o seletor Carrera.
@@ -43,7 +43,7 @@ Aplicação web de registro acadêmico de estudantes. Permite preencher dados pe
 
 #### 2.1. Rejeitar campos obrigatórios vazios
 
-**File:** `tests/frontend/student-registration-required-fields.spec.js`
+**File:** `tests/frontend/student-registration.cy.js`
 
 **Steps:**
   1. Abra a página com o repositório vazio e sem preencher nenhum campo.
@@ -55,7 +55,7 @@ Aplicação web de registro acadêmico de estudantes. Permite preencher dados pe
 
 #### 2.2. Rejeitar formatos e valores inválidos
 
-**File:** `tests/frontend/student-registration-invalid-data.spec.js`
+**File:** `tests/frontend/student-registration.cy.js` and `tests/unit/student-logic.test.js`
 
 **Steps:**
   1. Preencha todos os campos com dados válidos, exceto Correo electrónico, que deve conter correo-invalido.
@@ -73,7 +73,7 @@ Aplicação web de registro acadêmico de estudantes. Permite preencher dados pe
 
 #### 2.3. Impedir identificação e e-mail duplicados
 
-**File:** `tests/frontend/student-registration-duplicates.spec.js`
+**File:** `tests/frontend/student-registration.cy.js`, `tests/unit/student-logic.test.js`, and `tests/api/backend.test.js`
 
 **Steps:**
   1. Com a lista vazia, cadastre um estudante válido usando identificação DUP-PLAN-01 e e-mail dup.plan@example.com.
@@ -85,13 +85,23 @@ Aplicação web de registro acadêmico de estudantes. Permite preencher dados pe
   4. Repita cada tentativa usando diferenças apenas de maiúsculas/minúsculas na identificação ou no e-mail.
     - expect: As duplicidades continuam sendo detectadas sem distinção entre maiúsculas e minúsculas.
 
+#### 2.4. Informar indisponibilidade da API
+
+**File:** `tests/seed.spec.ts` and `tests/frontend/student-registration.cy.js`
+
+**Steps:**
+  1. Interrompa as requisições à API de estudantes durante o carregamento da página.
+    - expect: É exibido um aviso de falha de carregamento e a página não apresenta registros falsos.
+  2. Interrompa a requisição ao salvar um estudante válido.
+    - expect: É exibido um aviso de falha de conexão, os dados do formulário permanecem e o contador não aumenta.
+
 ### 3. Interação e acessibilidade
 
 **Seed:** `tests/accessibility/student-registration.spec.js`
 
 #### 3.1. Limpar formulário sem apagar registros existentes
 
-**File:** `tests/frontend/student-registration-clear.spec.js`
+**File:** `tests/frontend/student-registration.cy.js`
 
 **Steps:**
   1. Cadastre um estudante válido e confirme que ele aparece na tabela com contador 1.
@@ -104,7 +114,7 @@ Aplicação web de registro acadêmico de estudantes. Permite preencher dados pe
 
 #### 3.2. Verificar estrutura acessível e navegação por teclado
 
-**File:** `tests/accessibility/student-registration.spec.js`
+**File:** `tests/accessibility/student-registration.spec.js` and `tests/frontend/student-registration.cy.js`
 
 **Steps:**
   1. Abra a página inicial com o repositório vazio.

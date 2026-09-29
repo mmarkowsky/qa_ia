@@ -26,6 +26,12 @@ describe("Registro académico de estudiantes", () => {
     cy.get(studentPage.selectors.emptyState).should("be.visible");
   });
 
+  it("permite seleccionar cada carrera disponible", () => {
+    ["Ing. Informática", "Ing. Electrónica", "Ing. Telecomunicaciones", "Ing. Robótica", "Otra"].forEach(career => {
+      cy.get(studentPage.selectors.career).select(career).should("have.value", career);
+    });
+  });
+
   it("muestra un error accesible en cada campo requerido y no envía datos inválidos", () => {
     cy.intercept("POST", "**/api/students").as("createStudent");
     studentPage.submit();
@@ -57,6 +63,20 @@ describe("Registro académico de estudiantes", () => {
     studentPage.fieldError("firstName").should("be.empty");
     cy.get(studentPage.selectors.lastName).clear().type("Pérez2").blur();
     studentPage.fieldError("lastName").should("contain.text", "solo puede contener letras");
+  });
+
+  it("rechaza nombres y apellidos con menos de dos caracteres", () => {
+    cy.intercept("POST", "**/api/students").as("createStudent");
+    cy.fillStudentForm({ firstName: "A" });
+    studentPage.submit();
+    studentPage.fieldError("firstName").should("contain.text", "al menos 2 caracteres");
+
+    cy.get(studentPage.selectors.firstName).clear().type("Ana");
+    cy.get(studentPage.selectors.lastName).clear().type("B");
+    studentPage.submit();
+    studentPage.fieldError("lastName").should("contain.text", "al menos 2 caracteres");
+    cy.get(studentPage.selectors.studentRows).should("not.exist");
+    cy.get("@createStudent.all").should("have.length", 0);
   });
 
   it("valida el formato del correo electrónico", () => {
@@ -150,6 +170,36 @@ describe("Registro académico de estudiantes", () => {
     studentPage.fieldError("email").should("contain.text", "ya está registrado");
     cy.get(studentPage.selectors.studentRows).should("have.length", 1);
     cy.get("@createStudent.all").should("have.length", 0);
+  });
+
+  it("muestra conflictos de duplicidad devueltos por la API", () => {
+    cy.intercept("POST", "**/api/students", {
+      statusCode: 409,
+      body: {
+        error: "Este correo electrónico ya está registrado.",
+        fieldErrors: { email: "Este correo electrónico ya está registrado." }
+      }
+    }).as("createStudent");
+    cy.fillStudentForm();
+    studentPage.submit();
+
+    cy.wait("@createStudent");
+    studentPage.fieldError("email").should("contain.text", "ya está registrado");
+    cy.get(studentPage.selectors.status).should("contain.text", "ya está registrado");
+    cy.get(studentPage.selectors.studentRows).should("not.exist");
+    cy.get(studentPage.selectors.studentCount).should("have.text", "0");
+  });
+
+  it("informa falha de conexão ao salvar e preserva os dados digitados", () => {
+    cy.intercept("POST", "**/api/students", { forceNetworkError: true }).as("createStudent");
+    cy.fillStudentForm();
+    studentPage.submit();
+
+    cy.wait("@createStudent");
+    cy.get(studentPage.selectors.status).should("contain.text", "No fue posible conectar con el servidor");
+    cy.get(studentPage.selectors.identification).should("have.value", "QA-20260925");
+    cy.get(studentPage.selectors.studentRows).should("not.exist");
+    cy.get(studentPage.selectors.studentCount).should("have.text", "0");
   });
 
   it("limpia campos, errores y mensajes sin borrar los registros", () => {

@@ -1,0 +1,760 @@
+- generic [ref=f2e1]:
+  - generic:
+    - generic:
+      - link "Ir para o conteúdo principal" [ref=f2e2] [cursor=pointer]
+      - link "Ajuda sobre acessibilidade" [ref=f2e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=pt-BR
+  - generic [ref=f2e8]:
+    - search [ref=f2e9]:
+      - generic [ref=f2e12]:
+        - link [ref=f2e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=pt-BR&ictx=0&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQpYkNegQIBhAG
+          - img "Ir para a página inicial do Google" [ref=f2e14]
+        - generic [ref=f2e19]:
+          - combobox "Pesquisar" [ref=f2e22]: proximo jogo do river plate proximo jogo do river plate
+          - generic [ref=f2e23]:
+            - button "Limpar" [ref=f2e25] [cursor=pointer]
+            - generic [ref=f2e30]:
+              - button "Ferramentas de inserção de texto" [ref=f2e31] [cursor=pointer]
+              - button "Pesquisar por voz" [ref=f2e35] [cursor=pointer]
+              - button "Pesquisa por imagem" [ref=f2e38] [cursor=pointer]
+        - button "Pesquisar" [ref=f2e41] [cursor=pointer]
+    - generic [ref=f2e46]:
+      - button "Configurações" [ref=f2e48] [cursor=pointer]
+      - button "Compartilhar" [ref=f2e53] [cursor=pointer]
+      - generic [ref=f2e59]:
+        - button "Google Apps" [ref=f2e61] [cursor=pointer]
+        - link "Fazer login" [ref=f2e66] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=pt-BR&passive=true&continue=https://www.google.com/search%3Fq%3Dproximo%2Bjogo%2Bdo%2Briver%2Bplate%26sei%3DB7K6aqy5Lc-x5OUPjfPLgAU&ec=futura_srp_og_si_72236_p
+  - generic [ref=f2e69]:
+    - navigation [ref=f2e75]:
+      - generic [ref=f2e81]:
+        - list [ref=f2e82]:
+          - listitem [ref=f2e83]:
+            - link "Modo IA" [ref=f2e86] [cursor=pointer]:
+              - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&udm=50&fbs=ABfTbFVGaQeaqnsRPI5sOMG32Ksz_Qb61Fj5ZtxC2tjOZZgQR5ciZaQ31W5Tb7ABaDpcXvEcgGQwVA5_KeWSjOyZxGhHOwg_ZtPM5xxu6agvJAHiqK4eLG2PChBbQHNBcbTfXvpatvnRgYWsRaCfjBEccMkwbgLoOoX7ucPwHHgPXwq7l2wcWxas4_EBgnInwAmu-d7fpx9jFS05VsbHwF0uKp8biVUFjg&vsint=&aep=1&ntc=1&cs=0&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ2J8OegQIDRAD
+          - listitem [ref=f2e90]:
+            - link "Tudo" [disabled] [ref=f2e91]
+          - listitem [ref=f2e94]:
+            - link "Notícias" [ref=f2e95] [cursor=pointer]:
+              - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=proximo+jogo+do+river+plate&tbm=nws&source=lnms&fbs=ABfTbFVGaQeaqnsRPI5sOMG32Ksz_Qb61Fj5ZtxC2tjOZZgQR5ciZaQ31W5Tb7ABaDpcXvEcgGQwVA5_KeWSjOyZxGhHOwg_ZtPM5xxu6agvJAHiqK4eLG2PChBbQHNBcbTfXvpatvnRgYWsRaCfjBEccMkwbgLoOoX7ucPwHHgPXwq7l2wcWxas4_EBgnInwAmu-d7fpx9jFS05VsbHwF0uKp8biVUFjg&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ0pQJegQIGhAB
+          - listitem [ref=f2e98]:
+            - link "Vídeos" [ref=f2e99] [cursor=pointer]:
+              - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&udm=vids&fbs=ABfTbFVGaQeaqnsRPI5sOMG32Ksz_Qb61Fj5ZtxC2tjOZZgQR5ciZaQ31W5Tb7ABaDpcXvEcgGQwVA5_KeWSjOyZxGhHOwg_ZtPM5xxu6agvJAHiqK4eLG2PChBbQHNBcbTfXvpatvnRgYWsRaCfjBEccMkwbgLoOoX7ucPwHHgPXwq7l2wcWxas4_EBgnInwAmu-d7fpx9jFS05VsbHwF0uKp8biVUFjg&q=proximo+jogo+do+river+plate&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQtKgLegQIGRAB
+          - listitem [ref=f2e102]:
+            - link "Imagens" [ref=f2e103] [cursor=pointer]:
+              - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&udm=2&fbs=ABfTbFVGaQeaqnsRPI5sOMG32Ksz_Qb61Fj5ZtxC2tjOZZgQR5ciZaQ31W5Tb7ABaDpcXvEcgGQwVA5_KeWSjOyZxGhHOwg_ZtPM5xxu6agvJAHiqK4eLG2PChBbQHNBcbTfXvpatvnRgYWsRaCfjBEccMkwbgLoOoX7ucPwHHgPXwq7l2wcWxas4_EBgnInwAmu-d7fpx9jFS05VsbHwF0uKp8biVUFjg&q=proximo+jogo+do+river+plate&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQtKgLegQIFBAB
+          - listitem [ref=f2e106]:
+            - link "Shopping" [ref=f2e107] [cursor=pointer]:
+              - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&udm=28&fbs=ABfTbFVGaQeaqnsRPI5sOMG32Ksz_Qb61Fj5ZtxC2tjOZZgQR5ciZaQ31W5Tb7ABaDpcXvEcgGQwVA5_KeWSjOyZxGhHOwg_ZtPM5xxu6agvJAHiqK4eLG2PChBbQHNBcbTfXvpatvnRgYWsRaCfjBEccMkwbgLoOoX7ucPwHHgPXwq7l2wcWxas4_EBgnInwAmu-d7fpx9jFS05VsbHwF0uKp8biVUFjg&q=proximo+jogo+do+river+plate&ved=1t:220175&ictx=111
+          - listitem [ref=f2e110]:
+            - link "Vídeos curtos" [ref=f2e111] [cursor=pointer]:
+              - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&udm=39&fbs=ABfTbFVGaQeaqnsRPI5sOMG32Ksz_Qb61Fj5ZtxC2tjOZZgQR5ciZaQ31W5Tb7ABaDpcXvEcgGQwVA5_KeWSjOyZxGhHOwg_ZtPM5xxu6agvJAHiqK4eLG2PChBbQHNBcbTfXvpatvnRgYWsRaCfjBEccMkwbgLoOoX7ucPwHHgPXwq7l2wcWxas4_EBgnInwAmu-d7fpx9jFS05VsbHwF0uKp8biVUFjg&q=proximo+jogo+do+river+plate&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQs6gLegQIEBAB
+          - listitem [ref=f2e114]:
+            - button [ref=f2e115] [cursor=pointer]:
+              - generic "Mais filtros" [ref=f2e116]: Mais
+        - button "Ferramentas" [ref=f2e123] [cursor=pointer]
+    - heading "Resultados da pesquisa" [level=1] [ref=f2e130]
+    - generic [ref=f2e135]:
+      - generic [ref=f2e140]:
+        - generic [ref=f2e143]:
+          - button "Imagem em miniatura de Club Atlético River Plate" [ref=f2e147] [cursor=pointer]
+          - generic [ref=f2e150]:
+            - heading "Club Atlético River Plate" [level=2] [ref=f2e153]
+            - generic [ref=f2e154]:
+              - generic [ref=f2e155]: Campeonato Argentino de Futebol
+              - button [ref=f2e163] [cursor=pointer]:
+                - img "Mais opções de Club Atlético River Plate" [ref=f2e164]
+        - generic [aria-hidden] [ref=f2e168] [cursor=pointer]
+        - navigation [ref=f2e176]:
+          - tab "Visão geral" [ref=f2e177] [cursor=pointer]
+          - link "Partidas" [active] [ref=f2e179] [cursor=pointer]:
+            - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=proximo+jogo+do+river+plate&si=APenkKlsVW795wRnbLci4zGLscrNjlcr5U4MqZBD7wDo-x_NQEEFg6VyOMGCeO8ylvNpo3qnRDf1sXYyhMinnR2yQjX25Wp4C_V21D_XRWEJJbpO1xRgDsEblbEp41ILcHXcScXp0OrsZoMzZrTlK7yVL7pyHl4RKWc-IpUpyUe_2hlJg3oLz1mHAyf8Or58pfnf_avaykd64hXUeIAdoQPRHCM2AsgrOpkbAB3w3sRPJtwqTzAl6xQ9FX5nByoS-dXeiY1YF0x8rzuWmW7DyXOuZutpDMOMd8zGxzHWWhYEnzcnpDCyyjbdp2cgDmRfs3StvQiRmGnOHQw_kVxKOrFb7svR2R27dVFjZh4IIG8fTs4lYpTWgE2uQEE7aSBXNzfE3rjlghst3nGXhWKf2ezkD8FmLRoonFLRiZoiIz3nA7ZjpF35Q8mv0I7Z-NULsNQtnlDy0Ehcf_Ryh1DoEEj-uXLpTPLdZpDC_ebT22bdoYof6SxYAjGVO5IIo9VjdphUakXwtvkmvqzlyrtzvZ1pe24J-474QHyFdwXvZ0bpgWIs9reHzSAhU2GdbmS5IPX6O62rYrSDCGgEN49QpRpxib-n7CdB5R1jeNvJ3oQdaA6fl5zT36uPsgC4T0yq5AkwYdN1ss8Hm-4PadvlX6jhRVYfh3u7yuXrNd-I2vLEa1XOkm7S-W_YnaGdSEaL04FbVKS5RqK-8bVTLsGmFqBQC9vlWO9famYTrSrjU0iDXtVINS8-NUH5rcJY7jnDBuE9FMbH1Nc_ELfZYVMdfpEDM8Gj7DiELA%3D%3D&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQyNoBKAB6BAgWEAA&ictx=1
+          - link "Classificação" [ref=f2e181] [cursor=pointer]:
+            - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=classifica%C3%A7%C3%B5es+de+river+plate&si=APenkKmF8sbMxn5Fz3GR0RKeIQQNRuoArUuDOBLqzbZlZTruI147XxkiuaX8AuRmuwS2PsJCq8y6rIaFXP2DmeWwPVVVdtULuFlscZmT2QI15hy3PdgjuzyGgJbarnh819XbVB4DuM3DhJglbJGSGENXWuHg1VO4YWW2X7IFQUPY91ta32jF0W6stg_JZMgrbSrZuR2C_GSRTayz8Mhx6LHpyBEEcK8QRstkdSX_dghdaZqjk3KoEPuCh1-eeaSmUn0dI_GQ6Qua&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQyNoBKAB6BAgXEAA&ictx=1
+          - link "Time" [ref=f2e183] [cursor=pointer]:
+            - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=jogadores+de+river+plate&si=APenkKkLittAhcCfZ1lWRU204-tCFI4agEOo1tT1yFHTVB0DcBCmm-xMYD3Z0A84l4bGEE-74JrWHF8SZNfjy8_A2y_WQ-_-C6D-iF520crxBiSJ6sO5AVJCwYyNU5Iz2XRYwNAnEs343jeodcA1jUnHeRnk6DP__KeR-lzdfn023TdqO8gII0WwkwbeiVAWkMcpfLnoyb4a7tVACC0iMddKOlkNzrtj031ZVp8VffWUUXy-AgP5euo%3D&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQyNoBKAB6BAgYEAA&ictx=1
+      - main [ref=f2e185]:
+        - tabpanel [ref=f2e199]:
+          - generic [ref=f2e203]:
+            - generic [ref=f2e207]:
+              - link [ref=f2e210]:
+                - heading "Classificação" [level=3] [ref=f2e212]
+                - generic [ref=f2e213] [cursor=pointer]
+              - generic [ref=f2e225]:
+                - tablist [ref=f2e228]:
+                  - tab "Apertura" [ref=f2e229]
+                  - tab "Clausura" [selected] [ref=f2e230]
+                - generic [ref=f2e232]:
+                  - generic [ref=f2e237]:
+                    - heading [ref=f2e239]: Grupo B
+                    - table [ref=f2e244]:
+                      - rowgroup [ref=f2e245]:
+                        - row [ref=f2e246]:
+                          - columnheader [aria-hidden] [ref=f2e247]
+                          - generic [ref=f2e248]: Rank
+                          - columnheader [ref=f2e249]:
+                            - generic [ref=f2e250]: Clube
+                          - columnheader [ref=f2e251]:
+                            - generic [ref=f2e252]:
+                              - text: Pts
+                              - generic [ref=f2e253]: Pontos
+                          - columnheader [ref=f2e254]:
+                            - generic [ref=f2e255]:
+                              - text: PJ
+                              - generic [ref=f2e256]: Partidas jogadas
+                          - columnheader [ref=f2e257]:
+                            - generic [ref=f2e258]:
+                              - text: VIT
+                              - generic [ref=f2e259]: Vitórias
+                          - columnheader [ref=f2e260]:
+                            - generic [ref=f2e261]:
+                              - text: E
+                              - generic [ref=f2e262]: Empates
+                          - columnheader [ref=f2e263]:
+                            - generic [ref=f2e264]:
+                              - text: DER
+                              - generic [ref=f2e265]: Derrotas
+                          - columnheader [ref=f2e266]:
+                            - generic [ref=f2e267]:
+                              - text: GM
+                              - generic [ref=f2e268]: Gols marcados
+                          - columnheader [ref=f2e269]:
+                            - generic [ref=f2e270]:
+                              - text: GC
+                              - generic [ref=f2e271]: Gols contra
+                          - columnheader [ref=f2e272]:
+                            - generic [ref=f2e273]:
+                              - text: SG
+                              - generic [ref=f2e274]: Saldo de gols
+                          - columnheader [ref=f2e275]:
+                            - generic [ref=f2e276]:
+                              - text: Últimas 5
+                              - generic [ref=f2e277]: Últimas 5 partidas
+                        - row [ref=f2e278] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e279]
+                          - cell [ref=f2e280]
+                          - cell [ref=f2e288]:
+                            - link [ref=f2e290]: Independiente Rivadavia
+                          - cell [ref=f2e291]:
+                            - generic [ref=f2e292]: "34"
+                          - cell [ref=f2e293]:
+                            - generic [ref=f2e294]: "16"
+                          - cell [ref=f2e295]:
+                            - generic [ref=f2e296]: "10"
+                          - cell [ref=f2e297]:
+                            - generic [ref=f2e298]: "4"
+                          - cell [ref=f2e299]:
+                            - generic [ref=f2e300]: "2"
+                          - cell [ref=f2e301]:
+                            - generic [ref=f2e302]: "29"
+                          - cell [ref=f2e303]:
+                            - generic [ref=f2e304]: "15"
+                          - cell [ref=f2e305]:
+                            - generic [ref=f2e306]: "14"
+                          - gridcell [ref=f2e307]:
+                            - generic [ref=f2e308]: Vitórias
+                            - generic [ref=f2e309]: Vitórias
+                            - generic [ref=f2e310]: Vitórias
+                            - generic [ref=f2e311]: Empates
+                            - generic [ref=f2e312]: Empates
+                        - row [ref=f2e337]:
+                          - cell [aria-hidden] [ref=f2e338]
+                          - cell [ref=f2e339]
+                          - cell [ref=f2e347]:
+                            - link [ref=f2e349]: River Plate
+                          - cell [ref=f2e350]:
+                            - generic [ref=f2e351]: "29"
+                          - cell [ref=f2e352]:
+                            - generic [ref=f2e353]: "16"
+                          - cell [ref=f2e354]:
+                            - generic [ref=f2e355]: "9"
+                          - cell [ref=f2e356]:
+                            - generic [ref=f2e357]: "2"
+                          - cell [ref=f2e358]:
+                            - generic [ref=f2e359]: "5"
+                          - cell [ref=f2e360]:
+                            - generic [ref=f2e361]: "22"
+                          - cell [ref=f2e362]:
+                            - generic [ref=f2e363]: "12"
+                          - cell [ref=f2e364]:
+                            - generic [ref=f2e365]: "10"
+                          - gridcell [ref=f2e366]:
+                            - generic [ref=f2e367]: Vitórias
+                            - generic [ref=f2e368]: Vitórias
+                            - generic [ref=f2e369]: Vitórias
+                            - generic [ref=f2e370]: Vitórias
+                            - generic [ref=f2e371]: Derrota
+                        - row [ref=f2e396] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e397]
+                          - cell [ref=f2e398]
+                          - cell [ref=f2e406]:
+                            - link [ref=f2e408]: Argentinos Juniors
+                          - cell [ref=f2e409]:
+                            - generic [ref=f2e410]: "29"
+                          - cell [ref=f2e411]:
+                            - generic [ref=f2e412]: "16"
+                          - cell [ref=f2e413]:
+                            - generic [ref=f2e414]: "8"
+                          - cell [ref=f2e415]:
+                            - generic [ref=f2e416]: "5"
+                          - cell [ref=f2e417]:
+                            - generic [ref=f2e418]: "3"
+                          - cell [ref=f2e419]:
+                            - generic [ref=f2e420]: "17"
+                          - cell [ref=f2e421]:
+                            - generic [ref=f2e422]: "13"
+                          - cell [ref=f2e423]:
+                            - generic [ref=f2e424]: "4"
+                          - gridcell [ref=f2e425]:
+                            - generic [ref=f2e426]: Vitórias
+                            - generic [ref=f2e427]: Derrota
+                            - generic [ref=f2e428]: Vitórias
+                            - generic [ref=f2e429]: Vitórias
+                            - generic [ref=f2e430]: Derrota
+                        - row [ref=f2e455] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e456]
+                          - cell [ref=f2e457]
+                          - cell [ref=f2e465]:
+                            - link [ref=f2e467]: Rosario
+                          - cell [ref=f2e468]:
+                            - generic [ref=f2e469]: "28"
+                          - cell [ref=f2e470]:
+                            - generic [ref=f2e471]: "16"
+                          - cell [ref=f2e472]:
+                            - generic [ref=f2e473]: "8"
+                          - cell [ref=f2e474]:
+                            - generic [ref=f2e475]: "4"
+                          - cell [ref=f2e476]:
+                            - generic [ref=f2e477]: "4"
+                          - cell [ref=f2e478]:
+                            - generic [ref=f2e479]: "20"
+                          - cell [ref=f2e480]:
+                            - generic [ref=f2e481]: "16"
+                          - cell [ref=f2e482]:
+                            - generic [ref=f2e483]: "4"
+                          - gridcell [ref=f2e484]:
+                            - generic [ref=f2e485]: Vitórias
+                            - generic [ref=f2e486]: Derrota
+                            - generic [ref=f2e487]: Vitórias
+                            - generic [ref=f2e488]: Vitórias
+                            - generic [ref=f2e489]: Empates
+                        - row [ref=f2e514] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e515]
+                          - cell [ref=f2e516]
+                          - cell [ref=f2e524]:
+                            - link [ref=f2e526]: Belgrano
+                          - cell [ref=f2e527]:
+                            - generic [ref=f2e528]: "26"
+                          - cell [ref=f2e529]:
+                            - generic [ref=f2e530]: "16"
+                          - cell [ref=f2e531]:
+                            - generic [ref=f2e532]: "7"
+                          - cell [ref=f2e533]:
+                            - generic [ref=f2e534]: "5"
+                          - cell [ref=f2e535]:
+                            - generic [ref=f2e536]: "4"
+                          - cell [ref=f2e537]:
+                            - generic [ref=f2e538]: "17"
+                          - cell [ref=f2e539]:
+                            - generic [ref=f2e540]: "13"
+                          - cell [ref=f2e541]:
+                            - generic [ref=f2e542]: "4"
+                          - gridcell [ref=f2e543]:
+                            - generic [ref=f2e544]: Derrota
+                            - generic [ref=f2e545]: Vitórias
+                            - generic [ref=f2e546]: Empates
+                            - generic [ref=f2e547]: Derrota
+                            - generic [ref=f2e548]: Vitórias
+                  - generic [ref=f2e577]:
+                    - heading "Grupo B" [ref=f2e579]
+                    - table [ref=f2e584]:
+                      - rowgroup [ref=f2e585]:
+                        - row "Rank Clube Pontos Partidas jogadas Vitórias Empates Derrotas Gols marcados Gols contra Saldo de gols Últimas 5 partidas" [ref=f2e586]:
+                          - columnheader [aria-hidden] [ref=f2e587]
+                          - columnheader "Rank"
+                          - columnheader "Clube" [ref=f2e589]
+                          - columnheader "Pontos" [ref=f2e591]:
+                            - generic [ref=f2e592]:
+                              - text: Pts
+                              - generic [ref=f2e593]: Pontos
+                          - columnheader "Partidas jogadas" [ref=f2e594]:
+                            - generic [ref=f2e595]:
+                              - text: PJ
+                              - generic [ref=f2e596]: Partidas jogadas
+                          - columnheader "Vitórias" [ref=f2e597]:
+                            - generic [ref=f2e598]:
+                              - text: VIT
+                              - generic [ref=f2e599]: Vitórias
+                          - columnheader "Empates" [ref=f2e600]:
+                            - generic [ref=f2e601]:
+                              - text: E
+                              - generic [ref=f2e602]: Empates
+                          - columnheader "Derrotas" [ref=f2e603]:
+                            - generic [ref=f2e604]:
+                              - text: DER
+                              - generic [ref=f2e605]: Derrotas
+                          - columnheader "Gols marcados" [ref=f2e606]:
+                            - generic [ref=f2e607]:
+                              - text: GM
+                              - generic [ref=f2e608]: Gols marcados
+                          - columnheader "Gols contra" [ref=f2e609]:
+                            - generic [ref=f2e610]:
+                              - text: GC
+                              - generic [ref=f2e611]: Gols contra
+                          - columnheader "Saldo de gols" [ref=f2e612]:
+                            - generic [ref=f2e613]:
+                              - text: SG
+                              - generic [ref=f2e614]: Saldo de gols
+                          - columnheader "Últimas 5 partidas" [ref=f2e615]:
+                            - generic [ref=f2e616]:
+                              - text: Últimas 5
+                              - generic [ref=f2e617]: Últimas 5 partidas
+                        - row "Huracán" [ref=f2e618] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e619]
+                          - cell "6" [ref=f2e620]
+                          - cell [ref=f2e628]:
+                            - link "Huracán" [ref=f2e630]
+                          - cell "16" [ref=f2e631]
+                          - cell "10" [ref=f2e633]
+                          - cell "4" [ref=f2e635]
+                          - cell "4" [ref=f2e637]
+                          - cell "2" [ref=f2e639]
+                          - cell "10" [ref=f2e641]
+                          - cell "8" [ref=f2e643]
+                          - cell "2" [ref=f2e645]
+                          - gridcell "Derrota Empates Empates Vitórias Vitórias" [ref=f2e647]:
+                            - generic [ref=f2e648]: Derrota
+                            - generic [ref=f2e649]: Empates
+                            - generic [ref=f2e650]: Empates
+                            - generic [ref=f2e651]: Vitórias
+                            - generic [ref=f2e652]: Vitórias
+                        - row "Sarmiento" [ref=f2e677] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e678]
+                          - cell "7" [ref=f2e679]
+                          - cell [ref=f2e687]:
+                            - link "Sarmiento" [ref=f2e689]
+                          - cell "16" [ref=f2e690]
+                          - cell "10" [ref=f2e692]
+                          - cell "5" [ref=f2e694]
+                          - cell "1" [ref=f2e696]
+                          - cell "4" [ref=f2e698]
+                          - cell "17" [ref=f2e700]
+                          - cell "16" [ref=f2e702]
+                          - cell "1" [ref=f2e704]
+                          - gridcell "Vitórias Vitórias Vitórias Empates Derrota" [ref=f2e706]:
+                            - generic [ref=f2e707]: Vitórias
+                            - generic [ref=f2e708]: Vitórias
+                            - generic [ref=f2e709]: Vitórias
+                            - generic [ref=f2e710]: Empates
+                            - generic [ref=f2e711]: Derrota
+                        - row "River Plate" [ref=f2e736]:
+                          - cell [aria-hidden] [ref=f2e737]
+                          - cell "8" [ref=f2e738]
+                          - cell [ref=f2e746]:
+                            - link "River Plate" [ref=f2e748]
+                          - cell "13" [ref=f2e749]
+                          - cell "10" [ref=f2e751]
+                          - cell "4" [ref=f2e753]
+                          - cell "1" [ref=f2e755]
+                          - cell "5" [ref=f2e757]
+                          - cell "13" [ref=f2e759]
+                          - cell "12" [ref=f2e761]
+                          - cell "1" [ref=f2e763]
+                          - gridcell "Vitórias Vitórias Vitórias Vitórias Derrota" [ref=f2e765]:
+                            - generic [ref=f2e766]: Vitórias
+                            - generic [ref=f2e767]: Vitórias
+                            - generic [ref=f2e768]: Vitórias
+                            - generic [ref=f2e769]: Vitórias
+                            - generic [ref=f2e770]: Derrota
+                        - row "Tucuman" [ref=f2e795] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e796]
+                          - cell "9" [ref=f2e797]
+                          - cell [ref=f2e805]:
+                            - link "Tucuman" [ref=f2e807]
+                          - cell "13" [ref=f2e808]
+                          - cell "10" [ref=f2e810]
+                          - cell "3" [ref=f2e812]
+                          - cell "4" [ref=f2e814]
+                          - cell "3" [ref=f2e816]
+                          - cell "7" [ref=f2e818]
+                          - cell "6" [ref=f2e820]
+                          - cell "1" [ref=f2e822]
+                          - gridcell "Vitórias Empates Vitórias Derrota Derrota" [ref=f2e824]:
+                            - generic [ref=f2e825]: Vitórias
+                            - generic [ref=f2e826]: Empates
+                            - generic [ref=f2e827]: Vitórias
+                            - generic [ref=f2e828]: Derrota
+                            - generic [ref=f2e829]: Derrota
+                        - row "Tigre" [ref=f2e854] [cursor=pointer]:
+                          - cell [aria-hidden] [ref=f2e855]
+                          - cell "10" [ref=f2e856]
+                          - cell [ref=f2e864]:
+                            - link "Tigre" [ref=f2e866]
+                          - cell "12" [ref=f2e867]
+                          - cell "10" [ref=f2e869]
+                          - cell "3" [ref=f2e871]
+                          - cell "3" [ref=f2e873]
+                          - cell "4" [ref=f2e875]
+                          - cell "9" [ref=f2e877]
+                          - cell "9" [ref=f2e879]
+                          - cell "0" [ref=f2e881]
+                          - gridcell "Vitórias Empates Empates Derrota Derrota" [ref=f2e883]:
+                            - generic [ref=f2e884]: Vitórias
+                            - generic [ref=f2e885]: Empates
+                            - generic [ref=f2e886]: Empates
+                            - generic [ref=f2e887]: Derrota
+                            - generic [ref=f2e888]: Derrota
+              - separator
+            - generic [ref=f2e916]:
+              - heading "Perfis" [level=3] [ref=f2e919]
+              - generic [ref=f2e922]:
+                - link "Club Atlético River Plate Instagram" [ref=f2e926] [cursor=pointer]:
+                  - /url: /goto?url=CAESZwHrOzAViJqNHQGYDcex6yIRPqM42UdihfwqD35IQG8EmiLRJ350G6wHQAfq1I-pFphU3sww8oUKlxWRNnTZRHhrDk30MzohJi1zTzuydGKMtJ9CsZ4y_REJxWTspFaQp87uXgnr_dQ
+                  - generic [ref=f2e927]:
+                    - generic "Club Atlético River Plate" [ref=f2e929]
+                    - generic [ref=f2e931]: Instagram
+                - link "Club Atlético River Plate X (Twitter)" [ref=f2e936] [cursor=pointer]:
+                  - /url: /goto?url=CAESUwHrOzAVd41BPp45ZWVVDLCPuz7NIEUMxvGwOyxtLaFj9HXY20XJZGk02ZjBkJOPUqAiWGY8tp1TFPX1FJsmTcvPWNozDw15yHeKbi8IGBQ1SKS1
+                  - generic [ref=f2e937]:
+                    - generic "Club Atlético River Plate" [ref=f2e939]
+                    - generic [ref=f2e941]: X (Twitter)
+                - link "Club Atlético River Plate Facebook" [ref=f2e946] [cursor=pointer]:
+                  - /url: /goto?url=CAESdQHrOzAVxnX7haH9U_FJGV45JUJgKYgv4BmPv_P1jeuqXpiiSq19JrQfQSRoFhPVlz-ikCVVYFpSmoTSMmPMrFoFauzbopZa0e0v8uenAil7PUKSmvMxW65PGBs7RtpWZDqa7ihdxmEpEmuNz8tR-Gx-z9Glhg
+                  - generic [ref=f2e947]:
+                    - generic "Club Atlético River Plate" [ref=f2e949]
+                    - generic [ref=f2e951]: Facebook
+                - link "Club Atlético River Plate YouTube" [ref=f2e956] [cursor=pointer]:
+                  - /url: /goto?url=CAEScwHrOzAVSfir4bZfVu_jYDi52_6iXbOe-jbfeP9DcySD4SfPYhHibfJcGtFm5dpOAQe7MouILPukQy_QMrF7WOJphlqxZh1f_ZmWQXLoJWmVlNHpuPQsl1hGMQxoeF9feqpVbViG-_q97VeOMViilHXoXJY
+                  - generic [ref=f2e957]:
+                    - generic "Club Atlético River Plate" [ref=f2e959]
+                    - generic [ref=f2e961]: YouTube
+            - generic [ref=f2e966]:
+              - heading "Partidas" [level=2] [ref=f2e969]
+              - generic [ref=f2e978]:
+                - generic [ref=f2e979]:
+                  - link "Campeonato Argentino · qua., 07/10, 19:30 Sarmiento X River Plate Clausura · Rodada 11 de 16" [ref=f2e980]:
+                    - generic [ref=f2e987] [cursor=pointer]:
+                      - heading "Campeonato Argentino · qua., 07/10, 19:30" [level=3] [ref=f2e988]:
+                        - generic [ref=f2e989]:
+                          - generic [ref=f2e990]:
+                            - generic [ref=f2e991]: Campeonato Argentino
+                            - text: ·
+                          - generic [ref=f2e992]: qua., 07/10, 19:30
+                      - generic [ref=f2e993]:
+                        - generic [ref=f2e995]:
+                          - generic [ref=f2e1000]:
+                            - generic [ref=f2e1001]: Sarmiento
+                            - text: Sarmiento
+                          - generic [ref=f2e1002]: X
+                          - generic [ref=f2e1008]:
+                            - generic [ref=f2e1009]: River Plate
+                            - text: River Plate
+                        - generic [ref=f2e1010]: Clausura · Rodada 11 de 16
+                  - table "Partidas" [ref=f2e1017]:
+                    - rowgroup [ref=f2e1018]:
+                      - row [ref=f2e1019]:
+                        - cell [ref=f2e1020]:
+                          - link [ref=f2e1021]:
+                            - table [ref=f2e1026] [cursor=pointer]:
+                              - rowgroup [ref=f2e1027]:
+                                - row [ref=f2e1028]:
+                                  - cell [ref=f2e1029]
+                                  - cell [ref=f2e1030]
+                                  - cell [ref=f2e1031]
+                                  - cell [ref=f2e1032]
+                                  - cell [ref=f2e1033]
+                                  - cell
+                                - row [ref=f2e1034]:
+                                  - cell "Campeonato Argentino · Clausura · Rodada 12 de 16" [ref=f2e1035]
+                                - row [ref=f2e1037]:
+                                  - cell [ref=f2e1038]
+                                  - cell [ref=f2e1039]
+                                  - cell "Dom., 11/10 A confirmar" [ref=f2e1040]:
+                                    - generic [ref=f2e1043]:
+                                      - generic [ref=f2e1044]: Dom., 11/10
+                                      - generic [ref=f2e1045]: A confirmar
+                                  - cell
+                                - row [ref=f2e1046]:
+                                  - cell [ref=f2e1047]
+                                - row "River Plate" [ref=f2e1048]:
+                                  - cell [ref=f2e1049]
+                                  - cell "River Plate" [ref=f2e1051]:
+                                    - generic [ref=f2e1054]:
+                                      - generic [ref=f2e1055]: River Plate
+                                      - text: River Plate
+                                  - cell [ref=f2e1056]
+                                - row "Asociación Atlética Estudiantes" [ref=f2e1057]:
+                                  - cell [ref=f2e1058]
+                                  - cell "Asociación Atlética Estudiantes" [ref=f2e1060]:
+                                    - generic [ref=f2e1063]:
+                                      - generic [ref=f2e1064]: Asociación Atlética Estudiantes
+                                      - text: Asociación Atlética Estudiantes
+                                  - cell [ref=f2e1065]
+                                - row [ref=f2e1066]:
+                                  - cell [ref=f2e1067]
+                                - row [ref=f2e1068]
+                        - cell [ref=f2e1069]:
+                          - link [ref=f2e1070]:
+                            - table [ref=f2e1075] [cursor=pointer]:
+                              - rowgroup [ref=f2e1076]:
+                                - row [ref=f2e1077]:
+                                  - cell [ref=f2e1078]
+                                  - cell [ref=f2e1079]
+                                  - cell [ref=f2e1080]
+                                  - cell [ref=f2e1081]
+                                  - cell [ref=f2e1082]
+                                  - cell
+                                - row [ref=f2e1083]:
+                                  - cell "Campeonato Argentino · Clausura · Rodada 13 de 16" [ref=f2e1084]
+                                - row [ref=f2e1086]:
+                                  - cell [ref=f2e1087]
+                                  - cell [ref=f2e1088]
+                                  - cell "18/10 A confirmar" [ref=f2e1089]:
+                                    - generic [ref=f2e1092]:
+                                      - generic [ref=f2e1093]: 18/10
+                                      - generic [ref=f2e1094]: A confirmar
+                                  - cell
+                                - row [ref=f2e1095]:
+                                  - cell [ref=f2e1096]
+                                - row "Belgrano" [ref=f2e1097]:
+                                  - cell [ref=f2e1098]
+                                  - cell "Belgrano" [ref=f2e1100]:
+                                    - generic [ref=f2e1103]:
+                                      - generic [ref=f2e1104]: Belgrano
+                                      - text: Belgrano
+                                  - cell [ref=f2e1105]
+                                - row "River Plate" [ref=f2e1106]:
+                                  - cell [ref=f2e1107]
+                                  - cell "River Plate" [ref=f2e1109]:
+                                    - generic [ref=f2e1112]:
+                                      - generic [ref=f2e1113]: River Plate
+                                      - text: River Plate
+                                  - cell [ref=f2e1114]
+                                - row [ref=f2e1115]:
+                                  - cell [ref=f2e1116]
+                                - row [ref=f2e1117]
+                - button "Mais partidas" [ref=f2e1119]
+            - generic [ref=f2e1127]:
+              - heading "Resultados da Web" [level=2] [ref=f2e1128]
+              - generic [ref=f2e1129]:
+                - generic [ref=f2e1132]:
+                  - link "Calendário do River Plate 2026 ESPN Brasil https://www.espn.com.br › futebol › time › calendario" [ref=f2e1134] [cursor=pointer]:
+                    - /url: /goto?url=CAESfgHrOzAVu0fAtiu4DcNjKvR8X6fv0wp7xgpaItliS8LVBONMKXEYK0hvuevl4N_UXMXryug7HEy10ZJZHBE6o5h2pxPF-C5iEnvd-954w_jX7yhjDS59dmCIeml_XVlURqFMySvMPwRWvIF1lTv1_kaDLgGEzUEl5aewu2MRrA
+                    - heading "Calendário do River Plate 2026" [level=3] [ref=f2e1135]
+                    - generic [ref=f2e1141]:
+                      - generic [ref=f2e1142]: ESPN Brasil
+                      - generic [ref=f2e1144]: https://www.espn.com.br › futebol › time › calendario
+                  - button "Sobre este resultado" [ref=f2e1150] [cursor=pointer]
+                - generic [ref=f2e1157]:
+                  - text: A ESPN (BR) tem o calendário completo do
+                  - emphasis [ref=f2e1158]: River Plate
+                  - text: para 2026. Inclui informações de data, hora e canal de TV para todos os
+                  - emphasis [ref=f2e1159]: jogos do River Plate
+                  - text: .
+            - generic [ref=f2e1162]:
+              - generic [ref=f2e1165]:
+                - link "Partidos de River Plate | Calendario y Resultados 2026 riverplate.com https://www.riverplate.com › cale..." [ref=f2e1167] [cursor=pointer]:
+                  - /url: /goto?url=CAESbAHrOzAVN6BG8mCCsg_1BhVUpnaE6fQ3AbWaYk-Sqgtl4zv51GJ-mQ_r43Qfn4MUiDwriv5nvYc_ptOyqUIHWNCkLju90mNS3hF65MjDrYTWumkK0Kn0axRC8K6f5g_Ie9nNu7bQoNCZ2zLEnw
+                  - heading "Partidos de River Plate | Calendario y Resultados 2026" [level=3] [ref=f2e1168]
+                  - generic [ref=f2e1174]:
+                    - generic [ref=f2e1175]: riverplate.com
+                    - generic [ref=f2e1177]: https://www.riverplate.com › cale...
+                - generic [ref=f2e1179]:
+                  - generic [ref=f2e1180]: ·
+                  - link "Traduzir esta página" [ref=f2e1181] [cursor=pointer]:
+                    - /url: /goto?url=CAESvAEB6zswFVhxuPHEl776W87oCkEZus27ERAAeuR1x_ZF2KkZkQM_-4B2mtqasJoMVYMNcTl8TYRcUYO3X--DFA00WpukcB2aeRaw6b5HN-fg-ovFzFbdjQdpgPtXQ4qWc7fZo2-lQ4wd02XGuL1wUPYN0ASTtBkzb6s9W372vKYqQvsIQnysyr7nzU0Zwq5tvyTlA0Z8Rov5QEJYCV4I52WAJZ8OZKkSjA8QEG0Kyt5Zv7ZiE9X9IpDASQL0FQ
+                - button "Sobre este resultado" [ref=f2e1186] [cursor=pointer]
+              - generic [ref=f2e1193]:
+                - emphasis [ref=f2e1194]: Sábado 12 de septiembre|17.30 HS
+                - text: . Estadio Monumental Presidente José Fierro. San Miguel de Tucumán, Argentina. Ver estadísticas
+            - generic [ref=f2e1197]:
+              - generic [ref=f2e1200]:
+                - link "Próximos jogos do River Plate - calendário, datas e horários PLACAR AO VIVO https://www.placardefutebol.com.br › River Plate" [ref=f2e1202] [cursor=pointer]:
+                  - /url: /goto?url=CAESfQHrOzAVtVVoXPGNf63VD2UNgRtmz5HaiV8x0KuQsr354EEQhxXdLMGJAxHUf2zgZAQRa9T9DeEn-0jCnOPzaOoACmfKmuNtYsgKeOLKiY1H1UCRiv0_Dtc_XvGRvxNmfT8-RGDAj6cuzepGoZqq0YmReBO16m2S_TgFd80Y
+                  - heading "Próximos jogos do River Plate - calendário, datas e horários" [level=3] [ref=f2e1203]
+                  - generic [ref=f2e1209]:
+                    - generic [ref=f2e1210]: PLACAR AO VIVO
+                    - generic [ref=f2e1212]: https://www.placardefutebol.com.br › River Plate
+                - button "Sobre este resultado" [ref=f2e1218] [cursor=pointer]
+              - generic [ref=f2e1225]:
+                - emphasis [ref=f2e1226]: Próximos jogos do River Plate
+                - text: ; Sarmiento. River Plate. QUA, 07/10 19:30 ; River Plate. Estudiantes Río Cuarto. SÁB, 10/10 21:00 ; Belgrano. River Plate. SÁB, 17/ ...
+            - generic [ref=f2e1229]:
+              - generic [ref=f2e1232]:
+                - link "River Plate - Últimos jogos, placares e próximos jogos FotMob https://www.fotmob.com › Liga Profesional › River Plate" [ref=f2e1234] [cursor=pointer]:
+                  - /url: /goto?url=CAESeAHrOzAVMCsLCEq4a63TUO3LPzhsXcwZuChh9f2rA51Qdpbd5G_sQ9Bnhs0iEkCG4_W7C68Sp_Cd65DVXrc-JLI8V2aR6Rbe1hwmF0GVfUKnYXmCoeUhDMB2W0YpBCgbZtuN0D7lULSqtkM978iad2d3esJduoPUmA
+                  - heading "River Plate - Últimos jogos, placares e próximos jogos" [level=3] [ref=f2e1235]
+                  - generic [ref=f2e1241]:
+                    - generic [ref=f2e1242]: FotMob
+                    - generic [ref=f2e1244]: https://www.fotmob.com › Liga Profesional › River Plate
+                - button "Sobre este resultado" [ref=f2e1250] [cursor=pointer]
+              - generic [ref=f2e1257]:
+                - text: Lista completa de
+                - emphasis [ref=f2e1258]: jogos do River Plate
+                - text: com placares ao vivo, resultados e próximas partidas em todas as competições, incluindo
+                - emphasis [ref=f2e1259]: jogos
+                - text: de liga e copa.
+            - generic [ref=f2e1262]:
+              - generic [ref=f2e1265]:
+                - link "Jogos River Plate - Flashscore.com.br Resultados https://www.flashscore.com.br › river-plate › calendario" [ref=f2e1267] [cursor=pointer]:
+                  - /url: /goto?url=CAESgAEB6zswFW9pm6JpNGW0zOkMnmqgegsQCM2Wbw8q_37S0jGmw0CBLh9fo0IS9sRXW1BElt6yEEDZl1Q8d9-i6umekr2lS3ABSp7xGzWDupMisfZ5hyc3cjLzc0MOsWDCoyOKel-dev2D_HxIUnwp242FN1CjbykIIjkaNVCBdlguTA
+                  - heading "Jogos River Plate - Flashscore.com.br" [level=3] [ref=f2e1268]
+                  - generic [ref=f2e1274]:
+                    - generic [ref=f2e1275]: Resultados
+                    - generic [ref=f2e1277]: https://www.flashscore.com.br › river-plate › calendario
+                - button "Sobre este resultado" [ref=f2e1283] [cursor=pointer]
+              - generic [ref=f2e1290]:
+                - text: Futebol Argentina ; 04.10. 10:45. Sarmiento Junin ; 11.10. 13:00.
+                - emphasis [ref=f2e1291]: River Plate
+                - text: ; 18.10. 13:00. Belgrano ; 25.10. 14:00.
+                - emphasis [ref=f2e1292]: River Plate
+                - text: ; 01.11. 13:00. Boca Juniors.
+            - generic [ref=f2e1295]:
+              - generic [ref=f2e1298]:
+                - 'link "River Plate: Resultados e Agenda de jogos 365Scores https://www.365scores.com › river-plate-868 › matches" [ref=f2e1300] [cursor=pointer]':
+                  - /url: /goto?url=CAESgAEB6zswFXpPTTvbwyaz9wPYheSoGJdvrsiI_6Z6_WDxgDWZF7vb918oIOoDZrEkz_kldgWup52Ddmtqkv7vD3ZvJ6o-IOeo_nutYrpVGLti-zzy2tfeush7MrPtxNXel3d4I3R30YyX4gADenQQPrYfboAv_umaH7yhv0pCpGWc4w
+                  - 'heading "River Plate: Resultados e Agenda de jogos" [level=3] [ref=f2e1301]'
+                  - generic [ref=f2e1307]:
+                    - generic [ref=f2e1308]: 365Scores
+                    - generic [ref=f2e1310]: https://www.365scores.com › river-plate-868 › matches
+                - button "Sobre este resultado" [ref=f2e1316] [cursor=pointer]
+              - generic [ref=f2e1323]:
+                - emphasis [ref=f2e1324]: Jogos River Plate
+                - text: ; 07/10/2026 · Sarmiento Junin. Sarmiento Junin ; 18/10/2026 · Belgrano. Belgrano ; 25/10/2026 ·
+                - emphasis [ref=f2e1325]: River Plate
+                - text: .
+                - emphasis [ref=f2e1326]: River Plate
+                - text: ; 01/11/2026 · Boca Jrs.
+            - generic [ref=f2e1329]:
+              - generic [ref=f2e1332]:
+                - link "River Plate - Futebol Sofascore https://www.sofascore.com › football › team › river-plate" [ref=f2e1334] [cursor=pointer]:
+                  - /url: /goto?url=CAESdgHrOzAVIVm6N3PX1gHoklD04lNfaR4a1LFSiuBaOEFLqAlJNQbmltD4V1DzfTJrMcYoe5DocW6v0V_NDSFs-OEHY-H7eqSwk3tQEHFjzO4TOxcY_ddL_FTPEHpd2IYls2h6WT5553vF-ty-EdklJbnso2MlQb4
+                  - heading "River Plate - Futebol" [level=3] [ref=f2e1335]
+                  - generic [ref=f2e1341]:
+                    - generic [ref=f2e1342]: Sofascore
+                    - generic [ref=f2e1344]: https://www.sofascore.com › football › team › river-plate
+                - button "Sobre este resultado" [ref=f2e1350] [cursor=pointer]
+              - generic [ref=f2e1357]:
+                - emphasis [ref=f2e1358]: O River Plate jogará a próxima partida contra o Sarmiento em 4 de out. de 2026, 22:45:00 UTC
+                - text: pelo Liga Profesional de Fútbol. Quando a partida começar, você ...
+            - generic [ref=f2e1361]:
+              - generic [ref=f2e1364]:
+                - link "River Plate Fixtures | Schedule and Results 2026 riverplate.com https://www.riverplate.com › fixtu..." [ref=f2e1366] [cursor=pointer]:
+                  - /url: /goto?url=CAESXgHrOzAVFT2FWgF6SNlV51j_aUyNXfzUqpi-n4jq7-TAWpuoyR3uEyS4er5LUmdrrzDG0vNNQnsI_NX7lt-eH-qv9ZLr6h1fl_FlZf-FaTUvF3w_RlR3C54KVD91FGQ
+                  - heading "River Plate Fixtures | Schedule and Results 2026" [level=3] [ref=f2e1367]
+                  - generic [ref=f2e1373]:
+                    - generic [ref=f2e1374]: riverplate.com
+                    - generic [ref=f2e1376]: https://www.riverplate.com › fixtu...
+                - generic [ref=f2e1378]:
+                  - generic [ref=f2e1379]: ·
+                  - link "Traduzir esta página" [ref=f2e1380] [cursor=pointer]:
+                    - /url: /goto?url=CAESrQEB6zswFU66DPxdLXWNm086lrwAgaQFdi_bO0VH35c3IG7eItP91_aVEtmYuAvJhT_kY0wUqsGvdF7Xkxb0PS0tIhEOokrGUxsToP_tijAKm6INiJj89QVWPimkP-ld2pLNHpndGxlmMHmsvoHyKLeY1o1lqlkTDvoCevzHdO7d6abkaEaOcD8AB98dYuvklf4nR8tXlTCvoqM9HSlaMvksQpJ4NDWBtLbO019VaQ
+                - button "Sobre este resultado" [ref=f2e1385] [cursor=pointer]
+              - generic [ref=f2e1392]:
+                - emphasis [ref=f2e1393]: River Plate. -. Independiente Rivadavia
+                - text: . River Plate. Independiente Rivadavia. 3. 1. Sunday, September 6|07:15 PM. Monumental Stadium. Buenos Aires, Argentina.
+            - generic [ref=f2e1396]:
+              - generic [ref=f2e1399]:
+                - link "Ingressos para jogos do River Plate Tangol Tours https://www.tangol.com › ingressosetickets › futebol › r..." [ref=f2e1401] [cursor=pointer]:
+                  - /url: /goto?url=CAESfwHrOzAVMTpx7FyetFCX5ErWBP32ce9P1Y4mkrn5bxF-XQ9TXg3kBfy3eNmG_Sh8kYMxxYzIIUIRPcgtNpMUXmfxnUFNDBovx1gvDxtu9VlCbFsfPMI-mXku7gZ1p6E_Zxm9Vy71KqpvBfAphLhJPJ4sCOMDWcE-aOmBRa5Qa24
+                  - heading "Ingressos para jogos do River Plate" [level=3] [ref=f2e1402]
+                  - generic [ref=f2e1408]:
+                    - generic [ref=f2e1409]: Tangol Tours
+                    - generic [ref=f2e1411]: https://www.tangol.com › ingressosetickets › futebol › r...
+                - button "Sobre este resultado" [ref=f2e1417] [cursor=pointer]
+              - generic [ref=f2e1424]:
+                - emphasis [ref=f2e1425]: Encontre ingressos para os próximos jogos do River Plate
+                - text: e sinta de perto a força de uma das torcidas mais apaixonadas do futebol argentino.
+            - generic [ref=f2e1428]:
+              - generic [ref=f2e1431]:
+                - link "River Plate - Argentina - Jogos, Classificações, Elenco e ... ogol.com.br https://www.ogol.com.br › equipe › river-plate" [ref=f2e1433] [cursor=pointer]:
+                  - /url: /goto?url=CAESZQHrOzAVvnkyNhPxvI-BS9r8FzvKiooZyfv-g7AhtoV3CuBNPh7AvBGpwj3bhCsc4GBVMzgO65mSfHLLIlPS_b0-_SR8vGtNXqADy3MvgWy5HmCK3kXocbZMqvBBaD9-ogzK-A1t
+                  - heading "River Plate - Argentina - Jogos, Classificações, Elenco e ..." [level=3] [ref=f2e1434]
+                  - generic [ref=f2e1440]:
+                    - generic [ref=f2e1441]: ogol.com.br
+                    - generic [ref=f2e1443]: https://www.ogol.com.br › equipe › river-plate
+                - button "Sobre este resultado" [ref=f2e1449] [cursor=pointer]
+              - generic [ref=f2e1456]:
+                - text: Jogos ;
+                - emphasis [ref=f2e1457]: 10-10 21:30 · D1. River Plate. Estudiantes Río Cuarto
+                - text: . 1.15 · 5.75 · 17.00 ; 07-10 19:30 · D1. Sarmiento de Junín. River Plate.
+            - generic [ref=f2e1465]:
+              - heading "Outras pessoas pesquisaram" [level=2] [ref=f2e1467]
+              - generic [ref=f2e1469]:
+                - generic [ref=f2e1470]:
+                  - link "Próximo jogo do boca juniors" [ref=f2e1474] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Pr%C3%B3ximo+jogo+do+boca+juniors&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhfEAE
+                  - link "Próximo jogo do river plate na libertadores" [ref=f2e1488] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Pr%C3%B3ximo+jogo+do+river+plate+na+libertadores&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhgEAE
+                  - link "Jogo do river plate de hoje" [ref=f2e1502] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Jogo+do+river+plate+de+hoje&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhkEAE
+                  - link "Próximo jogo do river plate na sul americana" [ref=f2e1516] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Pr%C3%B3ximo+jogo+do+river+plate+na+sul+americana&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhlEAE
+                - generic [ref=f2e1527]:
+                  - link "Próximo jogo do bragantino" [ref=f2e1531] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Pr%C3%B3ximo+jogo+do+bragantino&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhnEAE
+                  - link "Próximo jogo do racing" [ref=f2e1545] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Pr%C3%B3ximo+jogo+do+racing&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhoEAE
+                  - link "Último jogo do river plate na libertadores" [ref=f2e1559] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=%C3%9Altimo+jogo+do+river+plate+na+libertadores&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhpEAE
+                  - link "Que hora é o jogo do river plate hoje" [ref=f2e1573] [cursor=pointer]:
+                    - /url: /search?sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&q=Que+hora+%C3%A9+o+jogo+do+river+plate+hoje&sa=X&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ1QJ6BAhjEAE
+        - navigation [ref=f2e1586]:
+          - heading "Navegação nas páginas" [level=1] [ref=f2e1587]
+          - text: "1"
+          - link "Page 2" [ref=f2e1590] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=10&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAE
+            - text: "2"
+          - link "Page 3" [ref=f2e1592] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=20&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAG
+            - text: "3"
+          - link "Page 4" [ref=f2e1594] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=30&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAI
+            - text: "4"
+          - link "Page 5" [ref=f2e1596] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=40&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAK
+            - text: "5"
+          - link "Page 6" [ref=f2e1598] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=50&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAM
+            - text: "6"
+          - link "Page 7" [ref=f2e1600] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=60&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAO
+            - text: "7"
+          - link "Page 8" [ref=f2e1602] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=70&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAQ
+            - text: "8"
+          - link "Page 9" [ref=f2e1604] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=80&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAS
+            - text: "9"
+          - link "Page 10" [ref=f2e1606] [cursor=pointer]:
+            - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=90&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8tMDegQIPRAU
+            - text: "10"
+          - heading [level=2] [ref=f2e1608]:
+            - link "Mais" [ref=f2e1609] [cursor=pointer]:
+              - /url: /search?q=proximo+jogo+do+river+plate&sca_esv=4cefd605c4e449b3&sxsrf=APpeQntdSuLlD13qEM_gfTly_Bpxvp8GzQ:1790620168467&ei=CLK6arrkG__N5OUP07rRyQY&start=10&sa=N&sstk=AS6-VmJPnZ4enqmoGJkwqiFD6rdaEMbwr9puMGTiRyRzc2IgmUtQ23Vbxbn0Gb0npP687qbv5RP227ggtW_5dhpNaFQKi8Lmk0jEOA&ved=2ahUKEwi6iMb485GXAxX_JrkGHVNdNGkQ8NMDegQIPRAW
+        - navigation
+      - complementary "Resultados complementares":
+        - heading "Resultados complementares" [level=2] [ref=f2e1612]
+    - contentinfo [ref=f2e1613]:
+      - heading "Links do rodapé" [level=1] [ref=f2e1614]
+      - generic [ref=f2e1618]:
+        - generic [ref=f2e1620]:
+          - text: Brasil
+          - generic [ref=f2e1622]:
+            - button "88056, Florianópolis - SC - Do seu endereço IP" [ref=f2e1624] [cursor=pointer]:
+              - generic [ref=f2e1625]: 88056, Florianópolis - SC
+              - generic [ref=f2e1627]:
+                - text: "-"
+                - generic [ref=f2e1628]: Do seu endereço IP
+            - text: "-"
+            - button "Atualizar local" [ref=f2e1630] [cursor=pointer]
+        - generic [ref=f2e1633]:
+          - link "Ajuda" [ref=f2e1634] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=pt-BR&fg=1
+          - link "Enviar feedback" [ref=f2e1635] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidade" [ref=f2e1636] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=pt-BR&fg=1
+          - link "Termos" [ref=f2e1637] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=pt-BR&fg=1

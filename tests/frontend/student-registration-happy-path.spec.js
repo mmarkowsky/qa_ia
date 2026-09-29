@@ -5,6 +5,25 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Cadastro de estudantes', () => {
   test('Registrar estudante válido e calcular a idade', async ({ page }) => {
+    await page.route('**/api/students', async route => {
+      if (route.request().method() === 'GET') {
+        await route.fulfill({ status: 200, json: [] });
+        return;
+      }
+
+      const student = route.request().postDataJSON();
+      const birthDate = new Date(`${student.birthDate}T00:00:00`);
+      const today = new Date();
+      const age = today.getFullYear() - birthDate.getFullYear() - (
+        today.getMonth() < birthDate.getMonth() ||
+        (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate()) ? 1 : 0
+      );
+      await route.fulfill({
+        status: 201,
+        json: { ...student, id: 'playwright-student', age }
+      });
+    });
+
     // 1. Abra a página inicial com o repositório de estudantes vazio.
     await page.goto('/');
 
@@ -30,6 +49,8 @@ test.describe('Cadastro de estudantes', () => {
     await expect(careerField).toHaveValue('');
     await expect(birthDateField).toHaveValue('');
     await expect(ageField).toHaveValue('—');
+    await expect(page.locator('#student-count')).toHaveAccessibleName('0 estudiantes registrados');
+    await expect(page.locator('#empty-state')).toBeVisible();
 
     // 2. Preencha Identificación com QA-PLAN-0001, Nombre com Alex, Apellido com Rivera, Correo electrónico com alex.rivera@example.com e País com Argentina.
     await identificationField.fill(identification);
@@ -63,7 +84,7 @@ test.describe('Cadastro de estudantes', () => {
     await page.getByRole('button', { name: 'Registrar estudiante' }).click();
 
     await expect(page.getByRole('status').filter({ hasText: 'Estudiante Alex Rivera registrado correctamente.' })).toBeVisible();
-    await expect(page.getByRole('status', { name: `${initialRowCount + 1} estudiantes registrados` })).toBeVisible();
+    await expect(page.locator('#student-count')).toHaveAccessibleName('1 estudiante registrado');
     await expect(dataRows).toHaveCount(initialRowCount + 1);
 
     const studentRow = dataRows.filter({ hasText: identification });
