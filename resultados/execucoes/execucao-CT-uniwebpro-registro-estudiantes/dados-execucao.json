@@ -1,0 +1,117 @@
+{
+  "title": "UniWebPro - Registro de Estudiantes",
+  "sourceFile": "resultados/CT-uniwebpro-registro-estudiantes.md",
+  "executionDate": "28/09/2026, 16:39:42",
+  "targetUrl": "http://127.0.0.1:3000",
+  "executor": "Agente QA Antigravity (Skill executor-casos-de-teste)",
+  "testCases": [
+    {
+      "id": "CT-001",
+      "title": "Visualização dos Elementos Iniciais do Módulo de Estudantes",
+      "criterion": "CA-01",
+      "status": "FAIL",
+      "steps": [
+        "Acessar o sistema UniWebPro na URL http://127.0.0.1:3000",
+        "Navegar até o módulo \"Estudiantes\"",
+        "Observar os elementos visíveis na página (Seção, Botão Registrar, Buscador, Tabela)"
+      ],
+      "expectedResult": "A seção \"Registro de Estudiantes\" está visível, o botão \"Registrar Estudiante\" está presente e habilitado, o campo de busca (buscador) está visível e a tabela de resultados está visível.",
+      "actualResult": "Elementos encontrados: Botão \"Registrar estudiante\" presente (true), Tabela presente (true). Divergências: Seção intitulada como \"Registro de Estudiantes\" NÃO encontrada (título é \"Datos del estudiante\"), campo de busca (buscador) NÃO existe na interface.",
+      "notes": "Inconsistência entre os requisitos da US e a UI atual: o campo de busca não foi implementado e o título da seção difere.",
+      "screenshots": [
+        {
+          "path": "screenshots/CT-001_01_elementos_iniciais.png",
+          "caption": "Tela inicial com ausência do campo de busca e título diferente da US"
+        }
+      ]
+    },
+    {
+      "id": "CT-002",
+      "title": "Abertura e Campos Obrigatórios Mínimos do Formulário de Registro",
+      "criterion": "CA-02",
+      "status": "FAIL",
+      "steps": [
+        "Clicar no botão \"Registrar Estudiante\" (ou observar o formulário na página)",
+        "Verificar os campos disponibilizados no formulário: Nombre del estudiante, Documento, Carrera, Contacto, Email"
+      ],
+      "expectedResult": "O formulário de registro é exibido e disponibiliza para preenchimento: Nombre, Documento, Carrera, Contacto e Email.",
+      "actualResult": "Campos encontrados: Nombre (#first-name: true), Documento/Identificación (#identification: true), Carrera (#career: true), Correo/Email (#email: true). Campo FALTANTE: \"Contacto\" não existe no formulário (false). Além disso, o formulário é estático na página e não abre via modal após clique.",
+      "notes": "O campo Contacto previsto na US não está presente no formulário; o formulário exige Apellido, País e Fecha de Nascimento como obrigatórios adicionais.",
+      "screenshots": [
+        {
+          "path": "screenshots/CT-002_01_formulario_campos.png",
+          "caption": "Formulário exibindo campos atuais sem o campo Contacto"
+        }
+      ]
+    },
+    {
+      "id": "CT-003",
+      "title": "Cadastro de Novo Estudante com Sucesso (Caminho Feliz)",
+      "criterion": "CA-03",
+      "status": "PASS",
+      "steps": [
+        "No formulário de registro, preencher Nombre del estudiante (\"Carlos\"), Apellido (\"Mendez\")",
+        "Preencher Documento com \"DOC-98765432\"",
+        "Preencher Carrera com \"Ing. Informática\" (equivalente à Engenharia)",
+        "Preencher Email com \"carlos.mendez@uniwebpro.edu\"",
+        "Preencher campos complementares obrigatórios do sistema (País: \"Brasil\", Data: \"1998-05-15\")",
+        "Acionar o botão \"Registrar estudiante\""
+      ],
+      "expectedResult": "O registro é salvo com sucesso. O estudante \"Carlos Mendez\" com documento \"DOC-98765432\" passa a constar na tabela de resultados.",
+      "actualResult": "O estudante Carlos Mendez com documento DOC-98765432 foi cadastrado e inserido com sucesso na tabela de resultados.",
+      "notes": "Salvo com sucesso após preenchimento dos campos obrigatórios da implementação atual.",
+      "screenshots": [
+        {
+          "path": "screenshots/CT-003_01_formulario_preenchido.png",
+          "caption": "Formulário preenchido com os dados do estudante Carlos Mendez"
+        },
+        {
+          "path": "screenshots/CT-003_02_estudante_salvo_tabela.png",
+          "caption": "Estudante Carlos Mendez exibido na tabela de resultados após cadastro"
+        }
+      ]
+    },
+    {
+      "id": "CT-004",
+      "title": "Busca de Estudante Cadastrado por Nome",
+      "criterion": "CA-03",
+      "status": "FAIL",
+      "steps": [
+        "Cadastrar e persistir previamente a estudante \"Mariana Silva\" (DOC-11223344)",
+        "Localizar o campo de busca (buscador) no módulo de Estudantes",
+        "Inserir o termo \"Mariana Silva\"",
+        "Executar a busca e validar a filtragem na tabela"
+      ],
+      "expectedResult": "A tabela de resultados filtra e apresenta o registro da estudante \"Mariana Silva\".",
+      "actualResult": "BLOQUEIO DE FUNCIONALIDADE: O campo de busca/filtro por nome NÃO existe na tela (seletor de busca ausente no DOM). Não foi possível realizar a busca por \"Mariana Silva\".",
+      "notes": "Defeito / Não-conformidade com o Critério de Aceite CA-03: falta o componente de busca por Nome na interface.",
+      "screenshots": [
+        {
+          "path": "screenshots/CT-004_01_tentativa_busca_nome.png",
+          "caption": "Módulo sem campo de busca por Nome disponível"
+        }
+      ]
+    },
+    {
+      "id": "CT-005",
+      "title": "Busca de Estudante Cadastrado por Documento",
+      "criterion": "CA-03",
+      "status": "FAIL",
+      "steps": [
+        "Cadastrar e persistir previamente o estudante \"Lucas Pereira\" (DOC-55667788)",
+        "Localizar o campo de busca no módulo de Estudantes",
+        "Inserir o termo \"DOC-55667788\"",
+        "Executar a busca e validar a filtragem na tabela"
+      ],
+      "expectedResult": "A tabela de resultados filtra e apresenta o registro do estudante correspondente ao documento \"DOC-55667788\".",
+      "actualResult": "BLOQUEIO DE FUNCIONALIDADE: O campo de busca/filtro por documento NÃO existe na interface. Não foi possível realizar o filtro por \"DOC-55667788\".",
+      "notes": "Defeito / Não-conformidade com o Critério de Aceite CA-03: falta o componente de busca por Documento na interface.",
+      "screenshots": [
+        {
+          "path": "screenshots/CT-005_01_tentativa_busca_documento.png",
+          "caption": "Módulo sem campo de busca por Documento disponível"
+        }
+      ]
+    }
+  ]
+}

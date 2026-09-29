@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITULO_RELATORIO}} - Relatório de Execução de Testes</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --info: #0ea5e9;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .badge-execution {
+      background: #0369a1;
+      color: #e0f2fe;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .meta-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .meta-info span strong {
+      color: var(--text-main);
+    }
+
+    /* Dashboard Metrics */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .kpi-value {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 0.25rem 0;
+    }
+
+    .kpi-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    .kpi-total .kpi-value { color: var(--primary); }
+    .kpi-pass .kpi-value { color: var(--success); }
+    .kpi-fail .kpi-value { color: var(--danger); }
+    .kpi-blocked .kpi-value { color: var(--warning); }
+    .kpi-rate .kpi-value { color: #a855f7; }
+
+    /* Filters */
+    .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: #0f172a;
+      border-color: var(--primary);
+    }
+
+    /* Test Case Card */
+    .tc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .tc-card.status-pass { border-left: 6px solid var(--success); }
+    .tc-card.status-fail { border-left: 6px solid var(--danger); }
+    .tc-card.status-blocked { border-left: 6px solid var(--warning); }
+
+    .tc-header {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--card-border);
+      cursor: pointer;
+    }
+
+    .tc-title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .tc-id {
+      background: #334155;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #38bdf8;
+    }
+
+    .tc-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .status-badge {
+      padding: 0.25rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-pass { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid #22c55e; }
+    .badge-fail { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+    .badge-blocked { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+
+    .tc-body {
+      padding: 1.5rem;
+    }
+
+    .tc-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .tc-section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-list {
+      list-style-position: inside;
+      padding-left: 0.5rem;
+    }
+
+    .step-list li {
+      margin-bottom: 0.4rem;
+      color: #cbd5e1;
+    }
+
+    .validation-box {
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .validation-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .validation-label {
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Screenshots Gallery */
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .screenshot-item {
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .screenshot-item:hover {
+      border-color: var(--primary);
+      transform: scale(1.02);
+    }
+
+    .screenshot-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .screenshot-caption {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-top: 1px solid var(--card-border);
+    }
+
+    /* Modal for Image Preview */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--card-border);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>{{TITULO_RELATORIO}}</h1>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem;">Relatório de Execução de Testes Automatizados / Exploratórios</p>
+        </div>
+        <span class="badge-execution">Execução Finalizada</span>
+      </div>
+      <div class="meta-info">
+        <span><strong>Arquivo Origem:</strong> <code>{{ARQUIVO_ORIGEM}}</code></span>
+        <span><strong>Data/Hora:</strong> {{DATA_EXECUCAO}}</span>
+        <span><strong>Ambiente / URL:</strong> {{AMBIENTE_URL}}</span>
+        <span><strong>Executor:</strong> {{EXECUTOR}}</span>
+      </div>
+    </header>
+
+    <!-- KPIs -->
+    <div class="kpi-grid">
+      <div class="kpi-card kpi-total">
+        <div class="kpi-label">Total de Testes</div>
+        <div class="kpi-value">{{TOTAL_TESTES}}</div>
+      </div>
+      <div class="kpi-card kpi-pass">
+        <div class="kpi-label">Passaram</div>
+        <div class="kpi-value">{{TOTAL_PASS}}</div>
+      </div>
+      <div class="kpi-card kpi-fail">
+        <div class="kpi-label">Falharam</div>
+        <div class="kpi-value">{{TOTAL_FAIL}}</div>
+      </div>
+      <div class="kpi-card kpi-blocked">
+        <div class="kpi-label">Bloqueados</div>
+        <div class="kpi-value">{{TOTAL_BLOCKED}}</div>
+      </div>
+      <div class="kpi-card kpi-rate">
+        <div class="kpi-label">Taxa de Sucesso</div>
+        <div class="kpi-value">{{TAXA_SUCESSO}}%</div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterTests('all')">Todos ({{TOTAL_TESTES}})</button>
+      <button class="filter-btn" onclick="filterTests('pass')">Passaram ({{TOTAL_PASS}})</button>
+      <button class="filter-btn" onclick="filterTests('fail')">Falharam ({{TOTAL_FAIL}})</button>
+      <button class="filter-btn" onclick="filterTests('blocked')">Bloqueados ({{TOTAL_BLOCKED}})</button>
+    </div>
+
+    <!-- Test Cases Container -->
+    <div id="testsContainer">
+      {{CASOS_DE_TESTE_HTML}}
+    </div>
+
+    <footer>
+      Relatório gerado automaticamente pela skill <strong>executor-casos-de-teste</strong> &bull; Evidências e validações salvas localmente
+    </footer>
+  </div>
+
+  <!-- Modal for Image Preview -->
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg" src="" alt="Screenshot Ampliado">
+  </div>
+
+  <script>
+    function filterTests(status) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.tc-card');
+      cards.forEach(card => {
+        if (status === 'all') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains('status-' + status) ? 'block' : 'none';
+        }
+      });
+    }
+
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const img = document.getElementById('modalImg');
+      img.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

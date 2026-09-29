@@ -14,24 +14,29 @@ test.describe('Acessibilidade do cadastro de estudantes', () => {
     for (let index = 0; index < fieldCount; index += 1) {
       await expect(fields.nth(index)).toHaveAccessibleName(/.+/);
     }
+
+    await expect(page.locator('table caption')).toHaveText('Lista de estudiantes registrados');
+    await expect(page.locator('#student-count')).toHaveAccessibleName(/\d+ estudiantes? registrados?/);
   });
 
   test('permite percorrer os controles principais com Tab', async ({ page }) => {
     await page.goto('/');
 
     await page.locator('#identification').focus();
-    const visitedIds = new Set(['identification']);
+    const visitedControls = ['identification'];
 
-    for (let index = 0; index < 20; index += 1) {
+    for (let index = 0; index < 16; index += 1) {
       await page.keyboard.press('Tab');
-      const focusedId = await page.evaluate(() => document.activeElement?.id || '');
-      if (focusedId) visitedIds.add(focusedId);
-      if (!focusedId || focusedId === 'clear-button') break;
+      const focusedControl = await page.evaluate(() =>
+        document.activeElement?.id || document.activeElement?.textContent?.trim() || ''
+      );
+      if (focusedControl !== visitedControls.at(-1)) visitedControls.push(focusedControl);
+      if (focusedControl === 'Registrar estudiante') break;
     }
 
-    expect(visitedIds).toEqual(new Set([
+    expect(visitedControls).toEqual([
       'identification', 'first-name', 'last-name', 'email', 'country',
-      'career', 'birth-date', 'age', 'clear-button'
-    ]));
+      'career', 'birth-date', 'age', 'clear-button', 'Registrar estudiante'
+    ]);
   });
 });
